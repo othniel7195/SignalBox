@@ -18,6 +18,8 @@
 		7D4A830A03FBB28AB432A6802ED7FF7C /* Pods-SignalBox_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00219514C99F431415410D3A46BC7B56 /* Pods-SignalBox_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81E732DE67784AC5191E17865B560024 /* SignalBoxContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2533DE3D476EB323B430AA49A2370958 /* SignalBoxContext.swift */; };
 		BF3E4F2626CFB83200965924 /* UIViewController+TopMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E4F2526CFB83200965924 /* UIViewController+TopMost.swift */; };
+		BF3E4F2826CFB9F200965924 /* ModuleURLMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E4F2726CFB9F200965924 /* ModuleURLMap.swift */; };
+		BF3E4F2A26CFBD4900965924 /* ModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E4F2926CFBD4900965924 /* ModuleRouter.swift */; };
 		CCD68D487149C18CBF7A97310D1D660C /* SignalBoxRequring.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E551B74837346EC2DD2D983096D2AE /* SignalBoxRequring.swift */; };
 		CFE9E9AF58DC30EB88D62340A49B80DA /* Pods-SignalBox_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 371033C9A92B6C35DE648551EAD6C71B /* Pods-SignalBox_Tests-dummy.m */; };
 		D689416755C7942641D6D7E488499AC1 /* Pods-SignalBox_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3EDDC04B4D0BAFC7AD381A1CFB3BF6 /* Pods-SignalBox_Example-dummy.m */; };
@@ -73,6 +75,8 @@
 		A6A8E7B8634FD0B75ECF84147B81BCAD /* SignalBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SignalBox.debug.xcconfig; sourceTree = "<group>"; };
 		B102A78D7E2C9C0E347B305B6737B73D /* Pods-SignalBox_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SignalBox_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BF3E4F2526CFB83200965924 /* UIViewController+TopMost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopMost.swift"; sourceTree = "<group>"; };
+		BF3E4F2726CFB9F200965924 /* ModuleURLMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleURLMap.swift; sourceTree = "<group>"; };
+		BF3E4F2926CFBD4900965924 /* ModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleRouter.swift; sourceTree = "<group>"; };
 		C3E551B74837346EC2DD2D983096D2AE /* SignalBoxRequring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignalBoxRequring.swift; path = SignalBox/Classes/SignalBoxRequring.swift; sourceTree = "<group>"; };
 		C584BEAEEC72B7F3FAE4F3D250B41FDA /* Pods-SignalBox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SignalBox_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C5A6717270A83F8AF0D46D0E981B94DA /* Pods-SignalBox_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SignalBox_Tests.modulemap"; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 				3730ED584C6AD8250CD113B799CBC3B8 /* URLManager.swift */,
 				BF3E4F2526CFB83200965924 /* UIViewController+TopMost.swift */,
 				3A7D0101FE8DA083DD0BDBACE67C2781 /* URLRouteType.swift */,
+				BF3E4F2726CFB9F200965924 /* ModuleURLMap.swift */,
+				BF3E4F2926CFBD4900965924 /* ModuleRouter.swift */,
 			);
 			name = ModuleRouter;
 			path = SignalBox/Classes/ModuleRouter;
@@ -424,6 +430,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3E4F2826CFB9F200965924 /* ModuleURLMap.swift in Sources */,
+				BF3E4F2A26CFBD4900965924 /* ModuleRouter.swift in Sources */,
 				E56B3C1F5440BD15E93418E6E3A30BCA /* SignalBox-dummy.m in Sources */,
 				5BC2C765F9D6B3B8E81DFEAA6FC8B989 /* SignalBoxAppDelegate.swift in Sources */,
 				BF3E4F2626CFB83200965924 /* UIViewController+TopMost.swift in Sources */,

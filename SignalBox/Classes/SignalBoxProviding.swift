@@ -13,13 +13,22 @@ public protocol ModuleSignalType {
     ///实现SignalBoxProviding 协议的名称
     var providingProtocolname: String { get }
     
+    ///实现路由ModuleURLMap协议的名称
+    var moduleRouteMapname: String { get }
+    
     ///应当和对应的 Module Framework 名称一致
     var moduleName: String { get }
 }
 
 extension ModuleSignalType {
-    var fullName: String {
+    ///xxxProviding name 编译后的
+    var providingFullName: String {
         return "\(moduleName).\(providingProtocolname)"
+    }
+    
+    ///xxxModuleURLMap name 编译后的
+    var moduleMapFullName: String {
+        return "\(moduleName).\(moduleRouteMapname)"
     }
 }
 
