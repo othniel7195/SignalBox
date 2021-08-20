@@ -26,5 +26,8 @@ class URLTests: XCTestCase {
         XCTAssertEqual(url.queryItems, string.queryItems)
     }
 
+    func testURLMatch() {
+        let string = "myapp://user/<int:id>"
+    }
     
 }
