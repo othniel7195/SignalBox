@@ -1,0 +1,6 @@
+framework module SignalBox {
+  umbrella header "SignalBox-umbrella.h"
+
+  export *
+  module * { export * }
+}

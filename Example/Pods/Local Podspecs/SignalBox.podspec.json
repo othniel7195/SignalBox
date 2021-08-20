@@ -1,0 +1,22 @@
+{
+  "name": "SignalBox",
+  "version": "0.1.0",
+  "summary": "A short description of SignalBox.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jimmy/SignalBox",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jimmy": "zhaofeng@shuinfo.com"
+  },
+  "source": {
+    "git": "https://github.com/jimmy/SignalBox.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "SignalBox/Classes/**/*"
+}
