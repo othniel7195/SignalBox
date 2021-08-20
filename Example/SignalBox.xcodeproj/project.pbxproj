@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		93DDC1237013BF4A5C17A0AA /* Pods_SignalBox_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B36D695F349E38DE3CBEE9 /* Pods_SignalBox_Example.framework */; };
 		A26933152ED5492598277170 /* Pods_SignalBox_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311207C7694DBB646A172E8F /* Pods_SignalBox_Tests.framework */; };
+		BF3E4F2426CFA2C600965924 /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E4F2326CFA2C600965924 /* URLTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		669CBEA23C21DD4B6390CD6C /* Pods-SignalBox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalBox_Tests.release.xcconfig"; path = "Target Support Files/Pods-SignalBox_Tests/Pods-SignalBox_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		86F76941F940AF7217BD9D88 /* Pods-SignalBox_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalBox_Example.debug.xcconfig"; path = "Target Support Files/Pods-SignalBox_Example/Pods-SignalBox_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B9B5ED8CB59492633A2BA87E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BF3E4F2326CFA2C600965924 /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
 		C9F016483BB8FB75A2618BE3 /* SignalBox.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SignalBox.podspec; path = ../SignalBox.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				BF3E4F2326CFA2C600965924 /* URLTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				BF3E4F2426CFA2C600965924 /* URLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
