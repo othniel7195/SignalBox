@@ -22,7 +22,7 @@ pod 'SignalBox'
 
 ## Author
 
-jimmy, zhaofeng@shuinfo.com
+jimmy, zhaofeng7195@yeah.net
 
 ## License
 
