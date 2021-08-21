@@ -10,25 +10,17 @@ import CloudKit
 
 ///Module 的基本配置信息
 public protocol ModuleSignalType {
-    ///实现SignalBoxProviding 协议的名称
-    var providingProtocolname: String { get }
-    
-    ///实现路由ModuleURLMap协议的名称
-    var moduleRouteMapname: String { get }
+    ///实现SignalBoxProviding协议的类的name
+    var providerName: String { get }
     
     ///应当和对应的 Module Framework 名称一致
     var moduleName: String { get }
 }
 
 extension ModuleSignalType {
-    ///xxxProviding name 编译后的
-    var providingFullName: String {
-        return "\(moduleName).\(providingProtocolname)"
-    }
-    
-    ///xxxModuleURLMap name 编译后的
-    var moduleMapFullName: String {
-        return "\(moduleName).\(moduleRouteMapname)"
+    ///实现xxxProviding协议的编译后的name
+    var providerFullName: String {
+        return "\(moduleName).\(providerName)"
     }
 }
 
@@ -55,7 +47,7 @@ public protocol SignalBoxProviding {
     
     func moduleWillResignActive()
     
-    func moduleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
+    @discardableResult func moduleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool
     
     func moduleDidReceiveMemoryWarning()
     
@@ -83,7 +75,7 @@ public protocol SignalBoxProviding {
 
     func moduleShouldAllowExtensionPointIdentifier(extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool
 
-    func continueUserActivity(activity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+    @discardableResult func continueUserActivity(activity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
 
     func didUpdateUserActivity(activity: NSUserActivity)
 

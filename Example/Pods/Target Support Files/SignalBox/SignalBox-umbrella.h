@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UIViewController+SignalBox.h"
 
 FOUNDATION_EXPORT double SignalBoxVersionNumber;
 FOUNDATION_EXPORT const unsigned char SignalBoxVersionString[];

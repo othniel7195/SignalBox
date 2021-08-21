@@ -18,5 +18,8 @@
   "platforms": {
     "ios": "11.0"
   },
+  "ios": {
+    "private_header_files": "Pod/Classes/**/*.h"
+  },
   "source_files": "SignalBox/Classes/**/*"
 }

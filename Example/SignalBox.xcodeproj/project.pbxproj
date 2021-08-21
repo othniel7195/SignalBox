@@ -48,7 +48,7 @@
 		86F76941F940AF7217BD9D88 /* Pods-SignalBox_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalBox_Example.debug.xcconfig"; path = "Target Support Files/Pods-SignalBox_Example/Pods-SignalBox_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B9B5ED8CB59492633A2BA87E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BF3E4F2326CFA2C600965924 /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
-		C9F016483BB8FB75A2618BE3 /* SignalBox.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SignalBox.podspec; path = ../SignalBox.podspec; sourceTree = "<group>"; };
+		C9F016483BB8FB75A2618BE3 /* SignalBox.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SignalBox.podspec; path = ../SignalBox.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

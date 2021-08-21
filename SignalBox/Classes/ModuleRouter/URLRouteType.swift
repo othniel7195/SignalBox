@@ -2,7 +2,7 @@
 //  URLRouteType.swift
 //  SignalBox
 //
-//  Created by jimmy on 2021/8/20.
+//  Created by jimmy on 2021/8/23.
 //
 
 import Foundation
