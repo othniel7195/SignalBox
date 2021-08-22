@@ -23,26 +23,14 @@ public class SignalBox {
     }
     
     /// 注册 Module 模块
-    /// requiring 符合SignalBoxRequiring协议
-    public func register<T: SignalBoxRequiring>(module: ModuleSignalType, requiring: T) {
-        SignalBoxLog.default.log("\(tag) registger module: \(module.moduleName), requiring: \(requiring)")
-        let provider = buildProviding(providerName: module.providerFullName)
-        moduleCache[module.providerName] = provider
-        requiringCache[requiring.requiringProtocolname] = requiring
-        provider.map { handleProviderRoutable(provider: $0) }
-    }
-    
-    /// 注册 Module 模块
     public func register(module: ModuleSignalType) {
         SignalBoxLog.default.log("\(tag) registger module: \(module.moduleName)")
         let provider = buildProviding(providerName: module.providerFullName)
         moduleCache[module.providerName] = provider
+        if let requiring = provider as? SignalBoxRequiring {
+            requiringCache[module.requringName] = requiring
+        }
         provider.map { handleProviderRoutable(provider: $0) }
-    }
-    
-    ///获取对应的provider 根据provider name
-    public func provider<T>() -> T? {
-        return moduleCache["\(T.self)"] as? T
     }
     
     ///获取对应的requiring实现
@@ -82,25 +70,25 @@ public class SignalBox {
 
 
 extension SignalBox {
-    func userWillLogin() {
+    public func userWillLogin() {
         moduleCache.forEach { (_, provider) in
             provider.userWillLogin()
         }
     }
     
-    func userDidLogin() {
+    public func userDidLogin() {
         moduleCache.forEach { (_, provider) in
             provider.userDidLogin()
         }
     }
     
-    func userWillLogout() {
+    public func userWillLogout() {
         moduleCache.forEach { (_, provider) in
             provider.userWillLogout()
         }
     }
     
-    func userDidLogout() {
+    public func userDidLogout() {
         moduleCache.forEach { (_, provider) in
             provider.userDidLogout()
         }
@@ -131,7 +119,7 @@ extension SignalBox {
         }
     }
     
-    func moduleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+    @discardableResult func moduleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         moduleCache.forEach { (_, provider) in
             provider.moduleOpenURL(url: url, options: options)
         }
@@ -220,7 +208,7 @@ extension SignalBox {
         return shouldAllow
     }
     
-    func continueUserActivity(activity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+    @discardableResult func continueUserActivity(activity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         moduleCache.forEach { (_, provider) in
             provider.continueUserActivity(activity: activity, restorationHandler: restorationHandler)
         }

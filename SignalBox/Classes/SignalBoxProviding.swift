@@ -15,6 +15,8 @@ public protocol ModuleSignalType {
     
     ///应当和对应的 Module Framework 名称一致
     var moduleName: String { get }
+    
+    var requringName: String { get }
 }
 
 extension ModuleSignalType {
@@ -87,60 +89,60 @@ public protocol SignalBoxProviding {
 // MARK: 默认实现
 extension SignalBoxProviding {
     
-    func userWillLogin() {}
+    public func userWillLogin() {}
     
-    func userDidLogin() {}
+    public func userDidLogin() {}
     
-    func userWillLogout() {}
+    public func userWillLogout() {}
     
-    func userDidLogout() {}
+    public func userDidLogout() {}
     
-    func remoteControlReceived(with event: UIEvent?) {}
+    public func remoteControlReceived(with event: UIEvent?) {}
     
-    @discardableResult func moduleOpen(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
+    @discardableResult public func moduleOpen(launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
         return true
     }
     
-    func moduleDidBecomeActive() {}
+    public func moduleDidBecomeActive() {}
     
-    func moduleWillResignActive() {}
+    public func moduleWillResignActive() {}
     
-    func moduleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+    public func moduleOpenURL(url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         return true
     }
     
-    func moduleDidReceiveMemoryWarning(){}
+    public func moduleDidReceiveMemoryWarning(){}
     
-    func moduleWillTerminate() {}
+    public func moduleWillTerminate() {}
     
-    func moduleSignificantTimeChange() {}
+    public func moduleSignificantTimeChange() {}
     
-    func moduleDidRegister(remoteNotificationsWithDeviceToken deviceToken: Data) {}
+    public func moduleDidRegister(remoteNotificationsWithDeviceToken deviceToken: Data) {}
     
-    func moduleDidFailToRegister(remoteNotificationsWithError error: Error) {}
+    public func moduleDidFailToRegister(remoteNotificationsWithError error: Error) {}
     
-    func moduleDidReceiveRemoteNotification(userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {}
+    public func moduleDidReceiveRemoteNotification(userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {}
     
-    func modulePerformAction(shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {}
+    public func modulePerformAction(shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {}
 
-    func moduleHandleEventsForBackgroundURLSession(identifier: String, completionHandler: @escaping () -> Void) {}
+    public func moduleHandleEventsForBackgroundURLSession(identifier: String, completionHandler: @escaping () -> Void) {}
 
-    func moduleHandleWatchKitExtensionRequest(userInfo: [AnyHashable : Any]?, reply: @escaping ([AnyHashable : Any]?) -> Void) {}
+    public func moduleHandleWatchKitExtensionRequest(userInfo: [AnyHashable : Any]?, reply: @escaping ([AnyHashable : Any]?) -> Void) {}
 
-    func moduleShouldRequestHealthAuthorization() {}
+    public func moduleShouldRequestHealthAuthorization() {}
 
-    func moduleDidEnterBackground() {}
+    public func moduleDidEnterBackground() {}
 
-    func moduleWillEnterForeground() {}
+    public func moduleWillEnterForeground() {}
 
-    func moduleShouldAllowExtensionPointIdentifier(extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool { return true
+    public func moduleShouldAllowExtensionPointIdentifier(extensionPointIdentifier: UIApplication.ExtensionPointIdentifier) -> Bool { return true
     }
 
-    func continueUserActivity(activity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+    public func continueUserActivity(activity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         return true
     }
 
-    func didUpdateUserActivity(activity: NSUserActivity) {}
+    public func didUpdateUserActivity(activity: NSUserActivity) {}
 
-    func userDidAcceptCloudKitShareWith(cloudKitShareMetadata: CKShare.Metadata) {}
+    public func userDidAcceptCloudKitShareWith(cloudKitShareMetadata: CKShare.Metadata) {}
 }
